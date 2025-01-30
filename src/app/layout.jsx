@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import ThemeProvider from "@/hooks/useTheme";
 import "./globals.css";
 import NotificationProvider from "@/hooks/useNotification";
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
             {children}
           </NotificationProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
